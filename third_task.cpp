@@ -82,5 +82,10 @@ int main() {
             cout << "print <change value> or <invoke value> or <:q>" << endl;
         }
     }
+
+    if (munmap(gcd_ptr, gcd_len) == -1) {
+        cerr << strerror(errno) << endl;
+        return EXIT_FAILURE;
+    }
     return 0;
 }
