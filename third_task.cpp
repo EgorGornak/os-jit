@@ -27,7 +27,7 @@ typedef int(*func)(int);
 void *gcd_ptr;
 
 void change_value(unsigned int x) {
-    if (mprotect(gcd_ptr, 4, PROT_READ | PROT_WRITE) == -1) {
+    if (mprotect(gcd_ptr, 7, PROT_READ | PROT_WRITE) == -1) {
         cerr << strerror(errno) << endl;
         exit(EXIT_FAILURE);
     }
